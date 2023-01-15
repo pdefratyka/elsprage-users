@@ -25,10 +25,4 @@ public class LoginValidationException extends UserValidationException {
             super("Login: " + login + " is too long. It can contain max: " + UserValidator.MAX_LOGIN_LENGTH + " characters.");
         }
     }
-
-    public static class LoginIsNotValid extends LoginValidationException {
-        public LoginIsNotValid(String login) {
-            super("Login: " + login + " is not valid.");
-        }
-    }
 }

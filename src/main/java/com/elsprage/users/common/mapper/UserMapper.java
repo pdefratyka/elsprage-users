@@ -11,7 +11,7 @@ public class UserMapper {
     public UserEntity mapToUserEntity(final UserRequest userRequest) {
         return UserEntity.builder()
                 .login(userRequest.getLogin())
-                .password(userRequest.getPassword().getBytes())
+                .password(userRequest.getPassword())
                 .email(userRequest.getEmail())
                 .build();
     }

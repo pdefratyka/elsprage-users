@@ -15,14 +15,14 @@ public class GlobalExceptionHandler {
 
     @ExceptionHandler(UserValidationException.class)
     public ResponseEntity<ExceptionResponse> handleUserValidationException(UserValidationException ex) {
-        log.error(ex.getMessage());
+        log.error(ex.getMessage(), ex);
         ExceptionResponse response = new ExceptionResponse(ex.getMessage(), HttpStatus.BAD_REQUEST);
         return ResponseEntity.badRequest().body(response);
     }
 
     @ExceptionHandler(WrongCredentialsException.class)
     public ResponseEntity<ExceptionResponse> handleWrongCredentialsException(WrongCredentialsException ex) {
-        log.error(ex.getMessage());
+        log.error(ex.getMessage(), ex);
         ExceptionResponse response = new ExceptionResponse(ex.getMessage(), HttpStatus.BAD_REQUEST);
         return ResponseEntity.badRequest().body(response);
     }
