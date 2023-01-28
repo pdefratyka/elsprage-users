@@ -1,5 +1,6 @@
 package com.elsprage.users.service.impl;
 
+import com.elsprage.users.persistance.entity.UserEntity;
 import com.elsprage.users.service.JwtService;
 import io.jsonwebtoken.Claims;
 import io.jsonwebtoken.Jwts;
@@ -32,8 +33,10 @@ public class JwtServiceImpl implements JwtService {
         return claimsResolver.apply(claims);
     }
 
-    public String generateToken(UserDetails userDetails) {
-        return generateToken(new HashMap<>(), userDetails);
+    public String generateToken(UserEntity userEntity) {
+        Map<String, Object> extraClaims = new HashMap<>();
+        extraClaims.put("userId", userEntity.getId());
+        return generateToken(extraClaims, userEntity);
     }
 
     public boolean isTokenValid(String token, UserDetails userDetails) {
