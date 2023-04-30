@@ -20,7 +20,7 @@ import java.util.function.Function;
 @Service
 public class JwtServiceImpl implements JwtService {
 
-    @Value("${elsprage.users.secret}")
+    @Value("${elsprage.jwt.secret}")
     public String SECRET_KEY;
 
     @Override
