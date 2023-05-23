@@ -1,12 +1,12 @@
 package com.elsprage.users.tools.testcontainers;
 
-import lombok.extern.slf4j.Slf4j;
+import lombok.extern.log4j.Log4j2;
 import org.testcontainers.consul.ConsulContainer;
 import org.testcontainers.utility.DockerImageName;
 
 import java.util.List;
 
-@Slf4j
+@Log4j2
 public class ConsulInitializer implements ContainerInitializer<ConsulContainer> {
 
     public static final DockerImageName CONSUL_IMAGE = DockerImageName

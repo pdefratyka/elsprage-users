@@ -4,7 +4,7 @@ import com.elsprage.users.model.request.LoginRequest;
 import com.elsprage.users.model.response.LoginResponse;
 import com.elsprage.users.service.AuthenticationService;
 import lombok.AllArgsConstructor;
-import lombok.extern.slf4j.Slf4j;
+import lombok.extern.log4j.Log4j2;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
@@ -14,7 +14,7 @@ import org.springframework.web.bind.annotation.RestController;
 @RestController
 @RequestMapping("/authentication")
 @AllArgsConstructor
-@Slf4j
+@Log4j2
 public class AuthenticationController {
 
     private final AuthenticationService authenticationService;

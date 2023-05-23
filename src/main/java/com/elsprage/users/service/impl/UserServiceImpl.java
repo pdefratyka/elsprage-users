@@ -5,13 +5,13 @@ import com.elsprage.users.common.exception.LoginValidationException;
 import com.elsprage.users.common.mapper.UserMapper;
 import com.elsprage.users.model.dto.UserDTO;
 import com.elsprage.users.model.request.UserRequest;
-import com.elsprage.users.persistance.enumeration.Role;
 import com.elsprage.users.persistance.entity.UserEntity;
+import com.elsprage.users.persistance.enumeration.Role;
 import com.elsprage.users.persistance.repository.UserRepository;
 import com.elsprage.users.service.UserService;
 import com.elsprage.users.utils.UserValidator;
 import lombok.RequiredArgsConstructor;
-import lombok.extern.slf4j.Slf4j;
+import lombok.extern.log4j.Log4j2;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;
 
@@ -19,7 +19,7 @@ import java.util.Optional;
 
 @Service
 @RequiredArgsConstructor
-@Slf4j
+@Log4j2
 public class UserServiceImpl implements UserService {
 
     private final UserRepository userRepository;

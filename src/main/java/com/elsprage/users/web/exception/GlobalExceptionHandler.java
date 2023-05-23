@@ -3,14 +3,14 @@ package com.elsprage.users.web.exception;
 import com.elsprage.users.common.exception.UserValidationException;
 import com.elsprage.users.common.exception.WrongCredentialsException;
 import com.elsprage.users.model.response.ExceptionResponse;
-import lombok.extern.slf4j.Slf4j;
+import lombok.extern.log4j.Log4j2;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.ExceptionHandler;
 import org.springframework.web.bind.annotation.RestControllerAdvice;
 
 @RestControllerAdvice
-@Slf4j
+@Log4j2
 public class GlobalExceptionHandler {
 
     @ExceptionHandler(UserValidationException.class)
