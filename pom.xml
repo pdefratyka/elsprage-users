@@ -7,7 +7,7 @@
     <groupId>com.elsprage</groupId>
     <artifactId>users</artifactId>
     <packaging>jar</packaging>
-    <version>0.0.2</version>
+    <version>0.0.3</version>
     <name>elsprage-users</name>
 
     <repositories>
@@ -26,7 +26,7 @@
         <maven.compiler.source>${java.version}</maven.compiler.source>
         <maven.compiler.target>${java.version}</maven.compiler.target>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-        <spring-boot.version>3.0.0</spring-boot.version>
+        <spring-boot.version>3.0.4</spring-boot.version>
         <spring-cloud.version>2022.0.0-RC1</spring-cloud.version>
         <junit.version>5.9.0</junit.version>
         <mockito.version>4.10.0</mockito.version>
@@ -89,6 +89,10 @@
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-data-jpa</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-validation</artifactId>
         </dependency>
         <dependency>
             <groupId>org.postgresql</groupId>

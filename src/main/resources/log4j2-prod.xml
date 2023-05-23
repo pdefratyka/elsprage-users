@@ -10,7 +10,7 @@
         </Async>
 
         <Console name="stdout" target="SYSTEM_OUT">
-            <PatternLayout pattern="%d{yyyy-MM-dd HH:mm:ss.SSS} pod=Elsprage tagapp=App %-5p [%-7t] %F:%L - %m%n"/>
+            <PatternLayout pattern="%d{yyyy-MM-dd HH:mm:ss.SSS} pod=Elsprage tagapp=Elsprage-Users %-5p [%-7t] %F:%L - %m%n"/>
         </Console>
 
     </Appenders>
