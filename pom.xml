@@ -7,7 +7,7 @@
     <groupId>com.elsprage</groupId>
     <artifactId>users</artifactId>
     <packaging>jar</packaging>
-    <version>0.0.3</version>
+    <version>0.0.4</version>
     <name>elsprage-users</name>
 
     <repositories>
